@@ -1,0 +1,29 @@
+use('biblioteca')
+db.inventory.insertOne({
+    libro: 'El príncipe de la nieve',
+    autor: 'Carlos',
+    precio: '20',
+    paginas: '250'
+})
+use('biblioteca')
+db.inventory.insertOne({
+    libro: 'El príncipe de la niebla',
+    autor: 'Mondongo',
+    precio: '50',
+    paginas: '290'
+})
+
+use('biblioteca')
+db.inventory.insertMany([{
+    libro: 'El príncipe',
+    autor: 'Mondo',
+    precio: '50',
+    paginas: '290'
+},
+{
+    libro: 'Santi putero',
+    autor: 'MondongoDB',
+    precio: '90',
+    paginas: '300'
+    },
+])

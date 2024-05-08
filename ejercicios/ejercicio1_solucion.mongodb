@@ -1,0 +1,3 @@
+use('libros_v1')
+
+db.libros_v1.find({precio: 50})

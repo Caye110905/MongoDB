@@ -1,0 +1,3 @@
+use('biblioteca')
+
+db.inventory.find({autor: "Carlos"})
