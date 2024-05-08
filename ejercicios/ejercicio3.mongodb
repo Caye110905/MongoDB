@@ -1,0 +1,70 @@
+db.articulos.drop()
+use("articulos_1")
+db.articulos_1.insertOne(
+  {
+    _id: 1,
+    nombre: 'MULTIFUNCION HP DESKJET 2675',
+    rubro: 'impresora',
+    precio: 3000,
+    stock: 20 
+  }
+)
+db.articulos_1.insertOne(
+  {
+    _id: 2,
+    nombre: 'MULTIFUNCION EPSON EXPRESSION XP241',
+    rubro: 'impresora',
+    precio: 3700,
+    stock: 5 
+  }
+)
+db.articulos_1.insertOne(
+  {
+    _id: 3,
+    nombre: 'LED 19 PHILIPS',
+    rubro: 'monitor',
+    precio: 4500,
+    stock: 2
+  }
+)
+db.articulos_1.insertOne(
+  {
+    _id: 4,
+    nombre: 'LED 22 PHILIPS',
+    rubro: 'monitor',
+    precio: 5700,
+    stock: 4
+  }
+)
+db.articulos_1.insertOne(
+  {
+    _id: 5,
+    nombre: 'LED 27 PHILIPS',
+    rubro: 'monitor',
+    precio: 12000,
+    stock: 1
+  }
+)
+
+db.articulos_1.insertOne(
+  {
+    _id: 6,
+    nombre: 'LOGITECH M90',
+    rubro: 'mouse',
+    precio: 300,
+    stock: 4
+  }
+)
+
+use("articulos_1")
+db.articulos.find()
+use("articulos_1")
+db.articulos_1.find({ rubro: { $ne: 'impresora' } })
+use("articulos_1")
+db.articulos_1.find({ rubro: 'mouse' })
+use("articulos_1")
+db.articulos_1.find({precio: { $gte: 5000 }})
+use("articulos_1")
+db.articulos.find({ rubro: 'impresora', precio: { $gte: 3500 } })
+use("articulos_1")
+db.articulos_1.find({ stock: { $gte: 0, $lte: 4 } })

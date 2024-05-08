@@ -1,0 +1,15 @@
+use('libros v2')
+
+db.articulos.find({})
+
+use('libros v2')
+
+db.libros.find({"autores.nacionalidad": "Argentina"});
+
+use('libros v2')
+
+db.libros.find({"libros": "Borges"});
+
+use('libros v2')
+
+db.libros.find({"nacionalidad": "Española", "precio": { $gte: 50 }});

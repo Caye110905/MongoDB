@@ -1,0 +1,4 @@
+use('articulos')
+
+db.articulos.find({})
+
